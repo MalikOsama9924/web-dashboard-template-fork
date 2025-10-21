@@ -1,0 +1,5 @@
+export const ENV = {
+  USER_TOKEN_KEY: process.env.NEXT_PUBLIC_USER_TOKEN_KEY || "token",
+  BASIC_AUTH_USERNAME: process.env.NEXT_PUBLIC_BASIC_AUTH_USERNAME || "",
+  BASIC_AUTH_PASSWORD: process.env.NEXT_PUBLIC_BASIC_AUTH_PASSWORD || "",
+};

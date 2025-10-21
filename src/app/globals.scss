@@ -1,0 +1,56 @@
+@use "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1536px;
+  --breakpoint-2xl: 1700px;
+
+  --color-primary: #4338ca;
+  --color-secondary: #6366f1;
+}
+
+* {
+  box-sizing: border-box;
+  transition: color 400ms, background-color 400ms, box-shadow 400ms;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  .main-container {
+    background-color: var(--main-container-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .content-container {
+      flex-grow: 1;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.border-default {
+  border: 1px solid var(--border-gray);
+}
+
+#nprogress .bar {
+  z-index: 10000;
+  background-color: var(--progress-bar-bg) !important;
+}

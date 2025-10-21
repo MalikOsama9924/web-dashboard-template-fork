@@ -1,0 +1,28 @@
+.dashboard-main-container {
+  background-color: var(--main-container-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  transition: padding-left 200ms;
+
+  .content-container {
+    flex-grow: 1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .paper-container {
+      min-height: 400px;
+      padding: 10px 24px;
+      margin: 2rem 0;
+      background-color: var(--main-container-paper-bg);
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.dashboard-main-container.dark {
+  .paper-container {
+    border: 1px solid rgba($color: var(--primary), $alpha: 0.4);
+  }
+}
